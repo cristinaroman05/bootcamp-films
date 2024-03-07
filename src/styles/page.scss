@@ -1,0 +1,27 @@
+.page {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  &__header {
+  }
+  &__content {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: baseline;
+    gap: 10px;
+    flex-grow: 1;
+    @include adaptTo("not-mobile") {
+        flex-wrap: nowrap;
+        height: 350px;
+        overflow: hidden;
+        // overflow-x: auto;
+        overflow-y: hidden;
+    }
+  }
+  &__footer {
+  }
+  &__show-more {
+    margin: 20px auto;
+  }
+}

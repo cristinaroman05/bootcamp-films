@@ -1,0 +1,57 @@
+@import "../../styles/variables.scss";
+@import"../../styles/media-queries.scss";
+.films-page{
+    &__section{
+        height: 360px;
+        background-image: url(../../assets/images/encabezado.svg);
+        background-repeat: no-repeat;
+        background-position: center;
+    }
+    &__section div{
+        color: $font-color-light;
+        margin: 15px 20px 10px 35px;
+        text-align: left;
+        font-weight: bold;
+    }
+    &__section h1{
+        font-size: 36px;
+    }
+    &__section p{
+        font-size: 20px;
+    }
+    &__section2{
+        background-image: url(../../assets/images/img-secciones.svg);
+        background-repeat: no-repeat;
+        background-position: center;
+    }
+    &__section2 h1{
+        color: $font-color-light;
+        font-size: 32px;
+        font-weight: bold;
+        text-align: left;
+    }
+    &__section2 p{
+        color: $font-color-light;
+        font-size: 16px;
+        font-weight: light;
+        text-align: left;
+    }
+    &__section2 div{
+        margin: 55px 35px 40px;
+    }
+}
+.films{
+    @include adaptTo("not-mobile") {
+        background-image: url(../../assets/images/trending-background.svg);
+        background-repeat: repeat-x;
+        flex-wrap: nowrap;
+        height: 350px;
+        overflow-x: scroll;
+    }
+}
+.trailers-section{
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: $background-generic;
+}

@@ -1,0 +1,17 @@
+@import "./variables.scss";
+.btn {
+    background-color: $background-generic;
+    color: $font-color-light;
+    padding: 10px 15px;
+    border-radius: 25px;
+    cursor: pointer;
+    width: 120px;
+    &--reverse{
+        background-color: $font-color-light;
+        color: $background-generic;
+    }
+    &__container{
+        margin-bottom: 15px;
+
+    }
+}

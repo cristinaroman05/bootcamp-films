@@ -1,0 +1,13 @@
+.card{
+    width: 160px;
+    cursor: pointer;
+    &__title{
+        font-size: 16px;
+        color: $font-color-dark;
+    }
+    &__img{
+        width: 130px;
+        height: 200px;
+        background-position: center;
+    }
+}
