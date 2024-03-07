@@ -1,5 +1,6 @@
 import { useState, useEffect } from "react";
 import useFetch from "../../hooks/useFetch";
+import iconYoutube from "../../assets/images/icons8-play-100 5.png"
 
 const API_KEY = process.env.REACT_APP_API_KEY;
 const API_URL_TRAILER = `${process.env.REACT_APP_API_URL}movie/`;
@@ -20,7 +21,7 @@ const TrailerCard = ({ trailerId }) => {
   console.log("trailers", trailerUrl);
   return (
     <div className="youtube-video">
-      <img src="../../assets/images/icons8-play-100 5.png"></img>
+      <img src={iconYoutube}></img>
       <a className="youtube-video__link" href={trailerUrl} target="_blank" rel="noreferrer">
         Ver en YouTube
       </a>

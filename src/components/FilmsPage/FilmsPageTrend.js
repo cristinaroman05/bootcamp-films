@@ -1,5 +1,5 @@
 import { React, useEffect, useState } from "react";
-import Header from "../../components/Header/Header/Header";
+import Header from "../Header/Header/Header";
 import "./FilmsPage.scss";
 import useFetch from "../../hooks/useFetch";
 import { Link } from "react-router-dom";

@@ -1,6 +1,6 @@
-import FilmsPageTrend from "../FilmsPage/FilmsPageTrend";
-import PopularFilms from "../FilmsPage/PopularFilms";
-import TrailersFilms from "../FilmsPage/TrailersFilms";
+import FilmsPageTrend from "../../components/FilmsPage/FilmsPageTrend";
+import PopularFilms from "../../components/FilmsPage/PopularFilms";
+import TrailersFilms from "../../components/FilmsPage/TrailersFilms";
 const Home = () => {
   return (
     <div>

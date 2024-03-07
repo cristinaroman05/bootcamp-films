@@ -1,6 +1,6 @@
 import { HashRouter, Route, Routes } from "react-router-dom";
 import "./App.scss";
-import FilmPage from "./pages/FilmPage/FilmPage";
+import FilmPage from "./components/FilmPage/FilmPage";
 import QuizPage from "./pages/QuizPage/QuizPage";
 import Footer from "./components/Footer/Footer";
 import Home from "./pages/Home/Home";

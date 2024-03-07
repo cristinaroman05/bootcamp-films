@@ -1,6 +1,6 @@
 import { useParams } from "react-router-dom";
-import Header from "../../components/Header/Header/Header";
-import "../FilmPage/FilmPage.scss";
+import Header from "../Header/Header/Header";
+import "./FilmPage.scss";
 import useFetch from "../../hooks/useFetch";
 
 const API_KEY = process.env.REACT_APP_API_KEY;
