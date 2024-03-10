@@ -1,5 +1,5 @@
 @import "../../../../src/styles/variables.scss";
-
+@import "../../../styles/media-queries.scss";
 .header{
     background-color: $background-generic;
     border: 1px solid #000;
@@ -8,10 +8,20 @@
     flex-direction: column;
     gap: 10px;
     justify-content: start;
+    @include adaptTo("not-mobile") {
+        display: flex;
+        flex-direction: row;
+        gap: 25px;
+    }
     &__nav{
         display: flex;
         justify-content: left;
+        width: 160px;
         gap: 10px;
         margin-left: 10px;
+        
     }
+}
+.logo-header{
+    width: 160px;
 }

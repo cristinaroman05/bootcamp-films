@@ -8,7 +8,7 @@ const useFetch = (API_URL) => {
       fetch(API_URL)
         .then((response) => response.json())
         .then((data) => {
-          setListFilms(data.results);
+          setListFilms(data);
           setLoading(false);
         });
       // .catch ((error) => {

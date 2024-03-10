@@ -9,7 +9,7 @@ const NUM_ITEMS_PER_PAGE = 3;
 const TrailersFilms = () => {
   const [movieData] = useFetch(API_URL_ + API_KEY);
   const [numTrailersToShow, setNumTrailersToShow] = useState(NUM_ITEMS_PER_PAGE);
-  const firstTrailers = movieData?.slice(0, numTrailersToShow) || [];
+  const firstTrailers = movieData?.results?.slice(0, numTrailersToShow) || [];
   const showMoreTrailers = () => {
     if (firstTrailers.length === movieData.length) {
       alert("Ya has cargado todas las películas");
@@ -21,7 +21,7 @@ const TrailersFilms = () => {
     <section className="trailers-section">
       <h1>Últimos avances</h1>
       <div className="trailers page__content">
-        {firstTrailers.map((movie) => {
+        {firstTrailers?.map((movie) => {
           return (
             <div key={movie.id}>
               <TrailerCard trailerId={movie.id}></TrailerCard>

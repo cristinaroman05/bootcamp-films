@@ -3,7 +3,7 @@ import logoFooter from "../../assets/images/logo-footer.svg"
 const Footer = () => {
   return (
     <footer className="footer">
-      <img src={logoFooter}/>
+      <img className="logo-footer" src={logoFooter}/>
     </footer>
   );
 };

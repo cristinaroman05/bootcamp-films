@@ -19,6 +19,7 @@ const FilmsPage = () => {
       .then((response) => response.json())
       .then((data) => {
         setFilmsData(data.results);
+        console.log(data.results)
       });
   }, []);
   const firstFilms = filmsData?.slice(0, numFilmsToShow) || [];
@@ -37,8 +38,6 @@ const FilmsPage = () => {
       setFilmsData(filmsDataWeekly);
     }
   };
-
-  console.log(firstFilms);
   return (
     <div className="films-page page">
       <Header></Header>

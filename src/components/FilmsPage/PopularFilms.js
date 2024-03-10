@@ -1,5 +1,6 @@
 import { React, useEffect, useState } from "react";
 import useFetch from "../../hooks/useFetch";
+import { Link } from "react-router-dom";
 
 const API_URL_MOVIE = `${process.env.REACT_APP_API_URL}movie/popular?api_key=`;
 const API_URL_TV = `${process.env.REACT_APP_API_URL}tv/popular?api_key=`;
@@ -34,8 +35,6 @@ const PopularFilms = () => {
       setFilmsData(DataTv);
     }
   };
-
-  console.log(firstFilms);
   return (
     <div className="films-page page">
       <h1>Lo más popular</h1>
@@ -49,14 +48,16 @@ const PopularFilms = () => {
       </div>
       <div className=" films page__content">
         {firstFilms?.map((film) => (
-          <div key={film.id} className="card">
-            <img className="card__img" alt={film.title} src={`${"https://image.tmdb.org/t/p/original"}${film.poster_path}`}></img>
-            <div>
-              <p>{film.vote_average}</p>
+          <Link to={`/film/${film.id}`} key={film.id}>
+            <div className="card">
+              <img className="card__img" alt={film.title} src={`${"https://image.tmdb.org/t/p/original"}${film.poster_path}`}></img>
+              <div>
+                <p>{film.vote_average}</p>
+              </div>
+              <h2 className="card__title">{film.title}</h2>
+              <p>{film.release_date}</p>
             </div>
-            <h2 className="card__title">{film.title}</h2>
-            <p>{film.release_date}</p>
-          </div>
+          </Link>
         ))}
       </div>
       <button onClick={showMoreFilms} className="page__show-more btn">

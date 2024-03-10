@@ -5,7 +5,7 @@
         height: 360px;
         background-image: url(../../assets/images/encabezado.svg);
         background-repeat: no-repeat;
-        background-position: center;
+        background-position: cover;
     }
     &__section div{
         color: $font-color-light;
@@ -15,9 +15,24 @@
     }
     &__section h1{
         font-size: 36px;
+        @include adaptTo("desktop-m"){
+            font-size: 48px;
+        }
+        @include adaptTo("desktop-xl"){
+            font-size: 48px;
+        }
+        
     }
     &__section p{
         font-size: 20px;
+        @include adaptTo("desktop-m"){
+            font-size: 32px;
+            width: 900px;;
+        }
+        @include adaptTo("desktop-xl"){
+            font-size: 32px;
+            width: 900px;;
+        }
     }
     &__section2{
         background-image: url(../../assets/images/img-secciones.svg);
